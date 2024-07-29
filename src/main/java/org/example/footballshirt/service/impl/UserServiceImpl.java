@@ -2,7 +2,6 @@ package org.example.footballshirt.service.impl;
 
 import lombok.RequiredArgsConstructor;
 import org.example.footballshirt.entity.User;
-import org.example.footballshirt.pojo.UserProjection;
 import org.example.footballshirt.pojo.UserPojo;
 import org.example.footballshirt.repository.UserRepository;
 import org.example.footballshirt.service.UserService;
@@ -18,8 +17,8 @@ public class UserServiceImpl implements UserService {
     @Override
     public Integer saveUser(UserPojo userPojo) {
         User user = new User();
-        user.setUserName(userPojo.getName());
-        user.setEmailAddress(userPojo.getEmail());
+        user.setUserName(userPojo.getUserName());
+        user.setEmailAddress(userPojo.getEmailAddress());
         user.setPassword(userPojo.getPassword());
         user.setContact(userPojo.getContact());
         userRepository.save(user);
@@ -30,11 +29,6 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<User> findAll() {
         return userRepository.findAll();
-    }
-
-    @Override
-    public List<UserProjection> findAll1() {
-        return List.of();
     }
 
     @Override

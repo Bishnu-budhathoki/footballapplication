@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 public class PaymentPojo {
-    private int payment_id;
+    private Integer payment_id;
 
     @NotEmpty(message = "payment_method is required")
     private String payment_method;

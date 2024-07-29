@@ -17,10 +17,10 @@ public class UserPojo {
     
 
     @NotEmpty(message = "name is required")
-    private String name;
+    private String userName;
 
     @NotEmpty(message = "email is required")
-    private String email;
+    private String emailAddress;
 
     @NotEmpty(message = "password is required")
     private String password;
